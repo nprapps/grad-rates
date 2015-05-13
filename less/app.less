@@ -72,7 +72,7 @@ html, body {
 }
 
 .slide {
-    background-color: #000;
+    //background-color: #000;
     visibility: hidden;
     position: absolute;
     top: 0;
@@ -267,6 +267,12 @@ h1,h2,h3,h4,h5,h6,p,ul,ol,li {
 }
 
 // default slide styles
+body {
+    background-image: url('../assets/chalkboard-pattern.jpg');
+    .background-size(cover);
+    background-position: center center;
+}
+
 #superContainer {
     height: 100%;
     position: relative;
@@ -316,8 +322,8 @@ h1,h2,h3,h4,h5,h6,p,ul,ol,li {
 
 //full-bleed background images on sections and slides
 .section, .slide {
-    .background-size(cover);
-    background-position: center center;
+    //.background-size(cover);
+    //background-position: center center;
 }
 
 // full width container within a section or slide
@@ -334,6 +340,7 @@ h1,h2,h3,h4,h5,h6,p,ul,ol,li {
         position: relative;
         vertical-align: top;
         padding-top: 20px;
+        vertical-align: middle;
         @media @screen-small-above {
             padding-top: 0;
             vertical-align: middle;
