@@ -39,9 +39,8 @@ def deploy_file(connection, src, dst, headers={}):
         k.key = dst
 
     file_headers = copy.copy(headers)
-
     if 'Content-Type' not in headers:
-        file_headers['Content-Type'] = mimetypes.guess_type(src)[0],
+        file_headers['Content-Type'] = mimetypes.guess_type(src)[0]
 
     # Gzip file
     if os.path.splitext(src)[1].lower() in GZIP_FILE_TYPES:
@@ -63,6 +62,7 @@ def deploy_file(connection, src, dst, headers={}):
             print 'Skipping %s (has not changed)' % src
         else:
             print 'Uploading %s --> %s (gzipped)' % (src, dst)
+            print file_headers
             k.set_contents_from_string(output.getvalue(), file_headers, policy='public-read')
     # Non-gzip file
     else:
