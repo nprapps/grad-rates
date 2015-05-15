@@ -39,9 +39,8 @@ def deploy_file(connection, src, dst, headers={}):
         k.key = dst
 
     file_headers = copy.copy(headers)
-
     if 'Content-Type' not in headers:
-        file_headers['Content-Type'] = mimetypes.guess_type(src)[0],
+        file_headers['Content-Type'] = mimetypes.guess_type(src)[0]
 
     # Gzip file
     if os.path.splitext(src)[1].lower() in GZIP_FILE_TYPES:
