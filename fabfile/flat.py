@@ -62,7 +62,6 @@ def deploy_file(connection, src, dst, headers={}):
             print 'Skipping %s (has not changed)' % src
         else:
             print 'Uploading %s --> %s (gzipped)' % (src, dst)
-            print file_headers
             k.set_contents_from_string(output.getvalue(), file_headers, policy='public-read')
     # Non-gzip file
     else:
