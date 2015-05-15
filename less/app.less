@@ -118,6 +118,7 @@ body {
     font: 16px/1.5em "Gotham SSm", helvetica, arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     background-color: #111;
+    background: transparent url('../assets/chalk-bg.png');
 }
 
 h1,h2,h3,h4,h5,h6,p,ul,ol,li {
@@ -267,11 +268,7 @@ h1,h2,h3,h4,h5,h6,p,ul,ol,li {
 }
 
 // default slide styles
-body {
-    background-image: url('../assets/chalkboard-pattern.jpg');
-    .background-size(cover);
-    background-position: center center;
-}
+
 
 #superContainer {
     height: 100%;
@@ -283,6 +280,7 @@ body {
     visibility: hidden;
     opacity: 0;
     .transition(opacity 3s ease);
+    overflow: hidden;
 
     position: relative;
     -webkit-box-sizing: border-box;
@@ -320,11 +318,10 @@ body {
     /*}*/
 }
 
-//full-bleed background images on sections and slides
-.section, .slide {
-    //.background-size(cover);
-    //background-position: center center;
+.slide {
+    overflow: auto;
 }
+
 
 // full width container within a section or slide
 .full-block {
@@ -352,7 +349,7 @@ body {
     .full-block-content {
         max-width: 1200px;
         margin: 0 auto;
-        padding: 0 40px;
+        padding: 0 60px;
         @media @screen-small-above {
              padding: 20px 100px;
         }
