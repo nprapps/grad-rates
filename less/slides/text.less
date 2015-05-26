@@ -10,9 +10,9 @@
         .slide-header {
             position: fixed;
             top: 0;
-            left: 0;
+            left: 5%;
             height: 30px;
-            width: 100%;
+            width: 90%;
             border-bottom: 1px solid #eee;
             background: #1A1A1A url('../assets/chalk-bg.png');
             color: #eee;
@@ -20,6 +20,9 @@
 
             @media @screen-small-above {
                position: absolute;
+               top: 0;
+               left: 0;
+               width: 100%;
             }
 
             h5 {
@@ -82,15 +85,18 @@
         .slide-footer {
             position: fixed;
             bottom: 0;
-            left: 0;
+            left: 5%;
             height: 45px;
-            width: 100%;
+            width: 90%;
             border-top: 1px solid #eee;
             background: #1A1A1A url('../assets/chalk-bg.png');
             color: #eee;
 
             @media @screen-small-above {
                position: absolute;
+               bottom: 0;
+               left: 0;
+               width: 100%;
             }
 
             h5 {
@@ -137,6 +143,7 @@
 
     }
     
+    //middle text
     &.middle-text {
         .full-block-cell {
             vertical-align: middle;
@@ -184,7 +191,39 @@
             }
         }
     }
-
+    
+    //three-ways
+    &.three-ways  {
+        ul {
+            li {
+                font-size: 16px;    
+                list-style-type: none;
+                position: relative;
+                em {
+                    position: absolute;
+                    top: 3px;
+                    left: -30px;
+                    font-size: 24px;
+                    font-style: normal;
+                    font-weight: bold;
+                }
+            }
+            .list-early {
+                b, em {color: @early-color;}
+            }
+            
+            .list-bar {
+                b, em {color: @lowering-color;}
+            }
+            
+            .list-game {
+                b, em {color: @gaming-color;}
+            }
+            
+        }
+    }
+    
+    //extra padding
     &.extra-padding {
         .full-block-content {
             padding: 100px 60px;
