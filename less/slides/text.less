@@ -1,23 +1,23 @@
 .slide.text {
-    
+
     h4,h5,h6,p,ul,ol,li {
         font-family: 'Josefin Sans', sans-serif;
-      
+
     }
-   
+
     .full-block {
        .full-block-content {
-            max-width: 700px;
-            margin: 0 auto;
-            padding-top: 10px;
-            
-            img { 
+            // max-width: 700px;
+            // margin: 0 auto;
+            // padding-top: 10px;
+
+            img {
                 display: block;
                 margin: 0 auto;
                 max-width: 100%;
                 margin-bottom: 10px;
             }
-            
+
             h2 {
                 font-size: 24px;
                 text-transform: uppercase;
@@ -26,9 +26,9 @@
                 text-shadow: 2px 2px 2px #000;
                 line-height: 1.7;
             }
-            
+
             /* handwriting
-            
+
             h3 {
                  font-family: 'Amatic SC', cursive;
                  font-size: 30px;
@@ -38,12 +38,12 @@
                  margin-bottom: 20px;
                  text-align: center;
                  color: #ddd;
-                 
+
                  b {font-weight: normal;}
             }
-            
+
             */
-            
+
             h3 {
                 font-family: 'Josefin Sans', sans-serif;
                 font-size: 20px;
@@ -51,11 +51,11 @@
                 margin: 0 0 15px 0;
                 color: #ccc;
                 font-weight: bold;
-               
+
             }
-            
+
             h4 {
-                
+
                 border-top: 1px solid #ddd;
                 margin-top: 30px;
                 font-size: 13px;
@@ -64,24 +64,24 @@
                 padding-top: 10px;
                 line-height: 1.5;
             }
-            
+
             h5 {
                 text-align: center;
             }
-            
-            h6 {
-                font-family: 'Amatic SC', cursive;
-                font-weight: bold;
-                text-align: center;
-                font-size: 18px;
-                border-bottom: 1px dashed #888;
-                padding-bottom: 10px;
-            }
-            
+
+            // h6 {
+            //     font-family: 'Amatic SC', cursive;
+            //     font-weight: bold;
+            //     text-align: center;
+            //     font-size: 18px;
+            //     border-bottom: 1px dashed #888;
+            //     padding-bottom: 10px;
+            // }
+
             ul {
                 margin: 10px 0;
                 padding: 0;
-                
+
                 li {
                     list-style-type: none;
                     font-size: 16px;
@@ -91,15 +91,175 @@
                     margin: 0 0 5px 0;
                 }
             }
-            
+
             p {
                 font-size: 16px;
                 line-height: 1.5;
                 margin: 0 0 15px 0;
                 color: #ccc;
             }
-            
-            
-        } 
+
+
+        }
     }
+
+    .full-block-content {
+        max-width: 700px;
+        margin: 0 auto;
+        padding: 60px;
+        //padding: 120px 60px 40px 60px;
+        position: relative;
+
+        .slide-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 30px;
+            width: 100%;
+            border-bottom: 1px solid #eee;
+            background: #1A1A1A url('../assets/chalk-bg.png');
+            color: #eee;
+
+
+            @media @screen-small-above {
+               position: absolute;
+            }
+
+            h5 {
+                position: relative;
+                bottom: -20px;
+                left: 0;
+                font-size: 17px;
+                margin: 0;
+                padding: 0;
+                line-height: 1;
+                text-align: center;
+
+                b {
+                    background: #1A1A1A url('../assets/chalk-bg.png');
+                    padding: 0 10px;
+
+                }
+            }
+
+            img {
+                max-width: 70px;
+                padding-top: 10px;
+            }
+        }
+
+        h4 {
+            font-family: 'Amatic SC', cursive;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        img {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.5;
+            margin: 0 0 15px 0;
+            color: #ccc;
+        }
+
+
+        .slide-footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            height: 45px;
+            width: 100%;
+            border-top: 1px solid #eee;
+            background: #1A1A1A url('../assets/chalk-bg.png');
+            color: #eee;
+
+            @media @screen-small-above {
+               position: absolute;
+            }
+
+            h5 {
+                  position: relative;
+                  top: -7px;
+                  left: 0;
+                  font-size: 17px;
+                  margin: 0;
+                  padding: 0;
+                  line-height: 1;
+                  text-align: center;
+
+                b {
+                    background: #1A1A1A url('../assets/chalk-bg.png');
+                    padding: 0 10px;
+
+                }
+            }
+
+            h6 {
+                text-align: center;
+                margin: 0;
+                padding: 0;
+                font-size: 11px;
+                font-weight: bold;
+                text-transform: uppercase;
+
+                a {
+                    display: block;
+                    color: #eee;
+                    padding-top: 15px;
+
+                    &:before {
+                        font-family: "FontAwesome";
+                        content: '\f14c';
+                        display: inline-block;
+                        padding-right: 5px;
+                    }
+                }
+            }
+        }
+
+    }
+
+    //stepping in early
+    &.section-early  {
+        .full-block-content {
+            .slide-header, .slide-footer {
+                border-color: @early-color;
+                color: @early-color;
+            }
+        }
+    }
+
+    //lowering the bar
+    &.section-lowering  {
+        .full-block-content {
+            .slide-header, .slide-footer {
+                border-color: @lowering-color;
+                color: @lowering-color;
+            }
+        }
+    }
+
+    //gaming the system
+    &.section-gaming  {
+        .full-block-content {
+            .slide-header, .slide-footer {
+                border-color: @gaming-color;
+                color: @gaming-color;
+            }
+        }
+    }
+
+    &.extra-padding {
+        .full-block-content {
+            padding: 100px 60px;
+        }
+    }
+
 }

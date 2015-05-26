@@ -4,7 +4,26 @@
     <div class="text full-block">
         <div class="full-block-cell">
             <div class="full-block-content">
+                <div class="slide-header">
+                    {% if row.section_title %}
+                        <h5><b>{{ row.section_title }}</b></h5>
+                    {% endif %}
+                    {% if row.small_portrait %}
+                        <img data-src="{{ row.small_portrait }}" class="lazy-load" alt=""/>
+                    {% endif %}
+                </div>
                 {% block slide_content %}{% endblock slide_content %}
+                <div class="slide-footer">
+                    {% if row.stateline %}
+                        <h5><b>{{ row.stateline }}</b></h5>
+                    {% endif %}
+                    {% if row.reporter %}
+                        <h6>Reporting by {{ row.reporter }}</h6>
+                    {% endif %}
+                    {% if row.read_more %}
+                        <h6><a href="{{ row.read_more_link }}">{{ row.read_more }}</a></h6>
+                    {% endif %}
+                </div>
             </div><!--full-block-content-->
 
             {% if row.caption_and_credit %}
