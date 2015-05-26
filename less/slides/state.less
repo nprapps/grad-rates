@@ -8,7 +8,8 @@
     .full-block-content {
         max-width: 700px;
         margin: 0 auto;
-        padding: 40px 20px;
+        padding: 40px 60px;
+        //padding: 120px 60px 40px 60px;
         position: relative;
         
         .slide-header {
@@ -41,6 +42,11 @@
                     padding: 0 10px;
                     
                 }
+            }
+            
+            img {
+                max-width: 70px;
+                padding-top: 10px;
             }
         }
         
@@ -104,6 +110,19 @@
                 font-size: 11px;
                 font-weight: bold;
                 text-transform: uppercase;
+                
+                a {
+                    display: block;
+                    color: #eee;
+                    padding-top: 15px;
+                    
+                    &:before {
+                        font-family: "FontAwesome";
+                        content: '\f14c';
+                        display: inline-block;
+                        padding-right: 5px;
+                    }
+                }
             }
         }
         
