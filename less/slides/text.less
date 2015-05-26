@@ -65,6 +65,9 @@
             text-align: center;
             font-size: 24px;
             font-weight: bold;
+            @media @screen-small-above {
+                margin-bottom: 40px;   
+            }
         }
 
         img {
@@ -72,6 +75,9 @@
             margin: 0 auto;
             max-width: 100%;
             margin-bottom: 10px;
+            @media @screen-small-above {
+                max-width: 300px;  
+            }
         }
 
         p {
@@ -79,6 +85,9 @@
             line-height: 1.5;
             margin: 0 0 15px 0;
             color: #ccc;
+            @media @screen-small-above {
+                font-size: 22px;   
+            }
         }
 
 
@@ -206,6 +215,15 @@
                     font-size: 24px;
                     font-style: normal;
                     font-weight: bold;
+                    @media @screen-small-above {
+                        font-size: 32px;
+                        left: -40px;   
+                    }
+                }
+                
+                @media @screen-small-above {
+                    font-size: 22px;  
+                    margin-bottom: 20px; 
                 }
             }
             .list-early {
