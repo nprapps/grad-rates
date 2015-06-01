@@ -108,7 +108,7 @@ var loadImages = function($slide) {
 
     if (bgimg.attr('src')) {
         $container.imgLiquid({
-            fill: false,
+            fill: true,
             horizontalAlign: "center",
             verticalAlign: "top",
         });
