@@ -6,15 +6,17 @@
         padding: 60px;
         //padding: 120px 60px 40px 60px;
         position: relative;
+        
+        
 
         .slide-header {
             position: fixed;
             top: 0;
-            left: 5%;
+            left: 0;
             height: 30px;
-            width: 90%;
+            width: 100%;
             border-bottom: 1px solid #eee;
-            //background: #1A1A1A url('../assets/chalk-bg.png');
+            background: #1A1A1A url('../assets/chalk-bg.png');
             color: #eee;
 
 
@@ -23,17 +25,20 @@
                top: 0;
                left: 0;
                width: 100%;
+               background-color: transparent;
+               background-image: none;
             }
 
             h5 {
                 position: relative;
-                bottom: -20px;
+                bottom: -23px;
                 left: 0;
-                font-size: 17px;
+                font-size: 14px;
                 margin: 0;
                 padding: 0;
                 line-height: 1;
                 text-align: center;
+                text-transform: uppercase;
 
                 b {
                     background: #1A1A1A url('../assets/chalk-bg.png');
@@ -95,11 +100,11 @@
         .slide-footer {
             position: fixed;
             bottom: 0;
-            left: 5%;
+            left: 0;
             height: 45px;
-            width: 90%;
+            width: 100%;
             border-top: 1px solid #eee;
-            //background: #1A1A1A url('../assets/chalk-bg.png');
+            background: #1A1A1A url('../assets/chalk-bg.png');
             color: #eee;
 
             @media @screen-small-above {
@@ -107,6 +112,8 @@
                bottom: 0;
                left: 0;
                width: 100%;
+               background-color: transparent;
+               background-image: none;
             }
 
             h5 {
@@ -151,6 +158,18 @@
             }
         }
 
+    }
+    
+    //start-section
+    &.start-section {
+        .full-block-cell {
+            .slide-header {
+                h5 {
+                    font-size: 24px;
+                    bottom: -19px;
+                }
+            }
+        }
     }
     
     //middle text
