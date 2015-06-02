@@ -4,7 +4,27 @@
         color: #fff;
         text-shadow: 2px 2px 2px #000;
 
-        .look-branding {
+        .branding {
+            position: relative;
+            margin-bottom: 40px;
+            
+            .hr-left {
+                position: absolute;
+                top: 50%;
+                left: 0;
+                width: 41%;
+                margin: 0;
+            }
+            
+            .hr-right {
+                position: absolute;
+                top: 50%;
+                right: 0;
+                width: 41%;
+                margin: 0;
+            }
+            
+            
             img {
                 max-width: 50px;
                 display: block;
@@ -14,71 +34,29 @@
                     max-width: 80px;
                 }
             }
-
-            h5 {
-                text-transform: uppercase;
-                font-weight: bold;
-                font-size: 12px;
-                padding: 5px 0 10px 0;
-                border-bottom: 3px solid #f60062;
-                display: inline-block;
-
-                @media @screen-small-above {
-                    font-size: 16px;
-                }
-            }
         }
 
          h1 {
              font-size: 30px;
              text-transform: uppercase;
-             font-weight: bold;
+             font-weight: normal;
              margin: 0;
+             letter-spacing: 6px;
+             
              @media @screen-small-above {
-                 font-size: 55px;
+                 //font-size: 55px;
             }
-            @media @screen-large-above {
-                font-size: 85px;
+            b {
+                display: block;                    
+                font-weight: bold;
+                letter-spacing: 2px;
+                font-size: 65px;
+                margin-top: 8px;
             }
          }
 
-         h2 {
-            font-size: 13px;
-            font-family: georgia, serif;
-            font-weight: normal;
-            margin: 5px 0;
-
-            p:first-child {
-                margin: 20px 0;
-            }
-
-            @media @screen-small-above {
-                margin: 5px 0 30px 0;
-                font-size: 24px;
-            }
-        }
-
-        h3 {
-            font-size: 11px;
-            font-weight: bold;
-            margin: 0;
-            @media @screen-small-above {
-                font-size: 16px;
-            }
-        }
-
-        h4 {
-            font-size: 11px;
-            font-family: georgia, serif;
-            margin: 5px 0 0 0;
-            font-style: italic;
-            @media @screen-small-above {
-                font-size: 14px;
-                margin: 10px 0 0 0;
-            }
-        }
-
         .btn.btn-go {
+            font-family: "Gotham SSm", "Helvetica Neue", Helvetica, Arial, sans-serif;
             border-radius: 0;
             background-color: #fff;
             text-transform: uppercase;
@@ -98,6 +76,40 @@
                 }
             }
 
+        }
+        
+        .byline {
+            position: relative;
+            margin: 100px 0 10px 0;
+            
+            .hr-left {
+                position: absolute;
+                top: 7px;
+                left: 0;
+                width: 38%;
+                margin: 0;
+            }
+            
+            .hr-right {
+                position: absolute;
+                top: 7px;
+                right: 0;
+                width: 38%;
+                margin: 0;
+            }
+            
+            ul {
+                list-style-type: none;
+                text-align: center;
+                font-size: 14px;
+                padding: 0;
+                
+                li {
+                    margin: 5px 0;
+                    line-height: 1;
+                }
+            }
+            
         }
     }
 }

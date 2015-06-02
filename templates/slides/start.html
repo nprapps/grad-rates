@@ -1,14 +1,23 @@
 {% extends '_slide.html' %}
 {% block slide_content %}
-    <div class="look-branding">
+    <div class="branding">
+        <hr class="hr-left">
         <img src="assets/npr-logo-100.png">
+        <hr class="hr-right">
     </div>
-    <h1>{{ row.text1|smarty }}</h1>
-
+        <div class="title-text">
+            {{ row.text1|smarty }}
+        </div>
 <!--
-    <h3>{{ COPY.post_metadata.author|smarty }}</h3>
+    
     <h4>{{ COPY.post_metadata.publish_date|smarty }}</h4>
 -->
 
-    <button class="btn btn-go">Go</button>
+    <button class="btn btn-go">Begin</button>
+    
+    <div class="byline">
+         <hr class="hr-left">
+            {{ COPY.post_metadata.author|smarty }}
+        <hr class="hr-right">
+    </div>
 {% endblock %}
