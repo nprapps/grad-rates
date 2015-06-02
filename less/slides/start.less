@@ -3,6 +3,10 @@
         text-align: center;
         color: #fff;
         text-shadow: 2px 2px 2px #000;
+        
+        .full-block-content {
+            padding: 20px 20px 0 20px;
+        }
 
         .branding {
             position: relative;
@@ -12,16 +16,24 @@
                 position: absolute;
                 top: 50%;
                 left: 0;
-                width: 41%;
+                width: 35%;
                 margin: 0;
+                
+                @media @screen-small-above {
+                    width: 41%;
+                }
             }
             
             .hr-right {
                 position: absolute;
                 top: 50%;
                 right: 0;
-                width: 41%;
+                width: 35%;
                 margin: 0;
+                
+                @media @screen-small-above {
+                    width: 41%;
+                }
             }
             
             
@@ -37,21 +49,25 @@
         }
 
          h1 {
-             font-size: 30px;
              text-transform: uppercase;
              font-weight: normal;
              margin: 0;
-             letter-spacing: 6px;
+             font-size: 14px;
+             letter-spacing: 3px;
              
-             @media @screen-small-above {
-                 //font-size: 55px;
-            }
+                @media @screen-small-above {
+                    font-size: 30px;
+                    letter-spacing: 6px;
+                }
             b {
                 display: block;                    
                 font-weight: bold;
                 letter-spacing: 2px;
-                font-size: 65px;
+                font-size: 27px;
                 margin-top: 8px;
+                @media @screen-small-above {
+                 font-size: 65px;
+                }
             }
          }
 
@@ -63,9 +79,15 @@
             font-weight: bold;
             margin: 35px auto 0 auto;
             text-align: center;
-             font-size: 18px;
-            padding: 0 22px;
-            line-height: 44px;
+             font-size: 16px;
+            padding: 0 14px;
+            line-height: 34px;
+            
+            @media @screen-small-above {
+                font-size: 18px;
+                padding: 0 22px;
+                line-height: 44px;
+            }
 
 
             &:hover {
@@ -86,16 +108,24 @@
                 position: absolute;
                 top: 7px;
                 left: 0;
-                width: 38%;
+                width: 15%;
                 margin: 0;
+                
+                @media @screen-small-above {
+                    width: 38%;
+                }
             }
             
             .hr-right {
                 position: absolute;
                 top: 7px;
                 right: 0;
-                width: 38%;
+                width: 15%;
                 margin: 0;
+                
+                @media @screen-small-above {
+                    width: 38%;
+                }
             }
             
             ul {
