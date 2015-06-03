@@ -9,6 +9,9 @@ var $nextArrow;
 var $previousArrow;
 var $startCardButton;
 var isTouch = Modernizr.touch;
+var $progressIndicator;
+var $currentProgress;
+var $readMoreLinks;
 
 var mobileSuffix;
 var w;
@@ -143,6 +146,18 @@ var showNavigation = function(index) {
     }
 }
 
+var animateProgress = function(index) {
+    var totalSlides = $slides.length;
+    var percentage = (index + 1) / totalSlides;
+    $currentProgress.css('width', percentage * 100 + '%');
+
+    if (index === 0) {
+        $progressIndicator.width(0);
+    } else {
+        $progressIndicator.width('100%');
+    }
+}
+
 var onSlideChange = function(e, fromIndex, toIndex) {
     /*
     * Called transitioning between slides.
@@ -150,6 +165,7 @@ var onSlideChange = function(e, fromIndex, toIndex) {
     lazyLoad(toIndex);
     showNavigation(toIndex);
     trackCompletion(toIndex);
+    animateProgress(toIndex);
     document.activeElement.blur();
     ANALYTICS.exitSlide(fromIndex.toString());
     ANALYTICS.trackEvent(lastSlideExitEvent, fromIndex.toString());
@@ -313,6 +329,9 @@ var resetArrows = function() {
     });
 }
 
+var onReadMoreClick = function() {
+    ANALYTICS.trackEvent('read-more-click', $(this).attr('href'));
+}
 
 $(document).ready(function() {
     $document = $(document);
@@ -325,9 +344,13 @@ $(document).ready(function() {
     $previousArrow = $arrows.filter('.prev');
     $nextArrow = $arrows.filter('.next');
     $upNext = $('.up-next');
+    $progressIndicator = $('.progress-indicator');
+    $currentProgress = $('.current-progress');
+    $readMoreLinks = $('.read-more');
 
     $startCardButton.on('click', onStartCardButtonClick);
     $slides.on('click', onSlideClick);
+    $readMoreLinks.on('click', onReadMoreClick);
 
     $upNext.on('click', onNextPostClick);
     $document.on('deck.change', onSlideChange);
