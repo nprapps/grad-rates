@@ -15,14 +15,18 @@
             margin-bottom: 60px;
             
             img {
-                max-width: 550px;
+                max-width: 275px;
                 .box-shadow(12px 12px 30px rgba(0,0,0,.7));
+                
+                @media @screen-small-above {
+                    max-width: 550px;
+                }
             }
             
             .btn.btn-go {
                 position: absolute;
                 bottom: -20px;
-                left: 42%;
+                left: 38%;
                 z-index: 20;
                 .box-shadow(5px 12px 14px rgba(0,0,0,.5));
                 font-family: "Gotham SSm", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -38,6 +42,7 @@
                 line-height: 34px;
                 
                 @media @screen-small-above {
+                    left: 42%;
                     font-size: 18px;
                     padding: 0 22px;
                     line-height: 44px;
