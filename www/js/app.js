@@ -361,9 +361,9 @@ $(document).ready(function() {
     if (isTouch) {
         $arrows.on('touchstart', fakeMobileHover);
         $arrows.on('touchend', rmFakeMobileHover);
-        $body.on('touchstart', onTouchStart);
-        $body.on('touchmove', onTouchMove);
-        $body.on('touchend', onTouchEnd);
+        // $body.on('touchstart', onTouchStart);
+        // $body.on('touchmove', onTouchMove);
+        // $body.on('touchend', onTouchEnd);
     }
 
     // Turn off Modernizr history when deploying
@@ -371,9 +371,7 @@ $(document).ready(function() {
         Modernizr.history = null;
     }
 
-    $.deck($slides, {
-        touch: { swipeTolerance: swipeTolerance }
-    });
+    $.deck($slides);
 
     onPageLoad();
     resize();
