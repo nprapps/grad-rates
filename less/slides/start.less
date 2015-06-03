@@ -23,79 +23,66 @@
                 }
             }
             
-            .btn.btn-go {
+            .begin-wrapper {
                 position: absolute;
                 bottom: -20px;
-                left: 38%;
-                z-index: 20;
-                .box-shadow(5px 12px 14px rgba(0,0,0,.5));
-                font-family: "Gotham SSm", "Helvetica Neue", Helvetica, Arial, sans-serif;
-                border-radius: 0;
-                color: #111;
-                background-color: #ffcc33;
-                text-transform: uppercase;
-                font-weight: bold;
-                margin: 35px auto 0 auto;
-                text-align: center;
-                 font-size: 16px;
-                padding: 0 14px;
-                line-height: 34px;
+                left: 0;
+                width: 100%;
                 
-                @media @screen-small-above {
-                    left: 42%;
-                    font-size: 18px;
-                    padding: 0 22px;
-                    line-height: 44px;
-                }
-    
-    
-                &:hover {
-                    .no-touch & {
-                        background-color: #6183BE;
-                        color: #fff;
-                        cursor: pointer;
+                .btn.btn-go {
+                    z-index: 20;
+                    .box-shadow(5px 12px 14px rgba(0,0,0,.5));
+                    font-family: "Gotham SSm", "Helvetica Neue", Helvetica, Arial, sans-serif;
+                    border-radius: 0;
+                    color: #111;
+                    background-color: #ffcc33;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    margin: 35px auto 0 auto;
+                    text-align: center;
+                     font-size: 16px;
+                    padding: 0 14px;
+                    line-height: 34px;
+                    
+                    @media @screen-small-above {
+                        left: 42%;
+                        font-size: 18px;
+                        padding: 0 22px;
+                        line-height: 44px;
                     }
+        
+        
+                    &:hover {
+                        .no-touch & {
+                            background-color: #6183BE;
+                            color: #fff;
+                            cursor: pointer;
+                        }
+                    }
+        
                 }
-    
             }
+            
+            
         }
 
         .branding {
             position: relative;
             margin-bottom: 40px;
-            
-            .hr-left {
-                position: absolute;
-                top: 50%;
-                left: 0;
-                width: 35%;
-                margin: 0;
-                
-                @media @screen-small-above {
-                    width: 41%;
-                }
-            }
-            
-            .hr-right {
-                position: absolute;
-                top: 50%;
-                right: 0;
-                width: 35%;
-                margin: 0;
-                
-                @media @screen-small-above {
-                    width: 41%;
-                }
-            }
+            border-bottom: 1px solid #eee;
             
             
             img {
-                max-width: 50px;
+                position: relative;
+                top: 10px;
+                max-width: 70px;
                 display: block;
                 margin: 0 auto;
+                padding: 0 10px;
+                background: #1A1A1A url('../assets/chalk-bg.png');
 
                 @media @screen-small-above {
-                    max-width: 80px;
+                    max-width: 100px;
                 }
             }
         }
@@ -128,36 +115,25 @@
         .byline {
             position: relative;
             margin: 10px 0 10px 0;
-            
-            .hr-left {
-                position: absolute;
-                top: 7px;
-                left: 0;
-                width: 15%;
-                margin: 0;
-                
-                @media @screen-small-above {
-                    width: 35%;
-                }
-            }
-            
-            .hr-right {
-                position: absolute;
-                top: 7px;
-                right: 0;
-                width: 15%;
-                margin: 0;
-                
-                @media @screen-small-above {
-                    width: 35%;
-                }
-            }
+            border-top: 1px solid #eee;
             
             ul {
                 list-style-type: none;
                 text-align: center;
                 font-size: 14px;
                 padding: 0;
+                position: relative;
+                top: -12px;
+                
+                li:first-child {
+                    b {
+                        font-weight: normal;
+                        padding: 0 10px;
+                        background: #1A1A1A url('../assets/chalk-bg.png');
+                    }
+                  
+                }
+
                 
                 li {
                     margin: 5px 0;

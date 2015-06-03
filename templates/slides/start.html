@@ -1,21 +1,21 @@
 {% extends '_slide.html' %}
 {% block slide_content %}
     <div class="branding">
-        <hr class="hr-left">
         <img src="assets/npr-logo-100.png">
-        <hr class="hr-right">
     </div>
         <div class="title-text">
             {{ row.text1|smarty }}
             
-            <button class="btn btn-go">Begin</button>
+            <div class="begin-wrapper">
+                <button class="btn btn-go">Begin</button>
+            </div>
         </div>
 
     
     
     <div class="byline">
-         <hr class="hr-left">
+         
             {{ COPY.post_metadata.author|smarty }}
-        <hr class="hr-right">
+        
     </div>
 {% endblock %}
