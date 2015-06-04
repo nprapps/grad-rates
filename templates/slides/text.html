@@ -4,6 +4,6 @@
 {% if row.large_portrait %}
     <img data-src="{{ row.large_portrait }}" class="lazy-load">
 {% endif %}
-{{ row.text1 }}
+{{ row.text1|smarty}}
 
 {% endblock %}
