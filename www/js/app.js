@@ -12,6 +12,7 @@ var isTouch = Modernizr.touch;
 var $progressIndicator;
 var $currentProgress;
 var $readMoreLinks;
+var $learnMoreLink;
 
 var mobileSuffix;
 var w;
@@ -333,6 +334,10 @@ var onReadMoreClick = function() {
     ANALYTICS.trackEvent('read-more-click', $(this).attr('href'));
 }
 
+var onLearnMoreClick = function() {
+    ANALYTICS.trackEvent('learn-more-click');
+}
+
 $(document).ready(function() {
     $document = $(document);
     $body = $('body');
@@ -347,10 +352,12 @@ $(document).ready(function() {
     $progressIndicator = $('.progress-indicator');
     $currentProgress = $('.current-progress');
     $readMoreLinks = $('.read-more');
+    $learnMoreLink = $('.learn-more');
 
     $startCardButton.on('click', onStartCardButtonClick);
     $slides.on('click', onSlideClick);
     $readMoreLinks.on('click', onReadMoreClick);
+    $learnMoreLink.on('click', onLearnMoreClick);
 
     $upNext.on('click', onNextPostClick);
     $document.on('deck.change', onSlideChange);
