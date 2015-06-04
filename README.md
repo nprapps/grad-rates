@@ -370,12 +370,12 @@ The Google Analytics events tracked in this application are:
 
 |Category|Action|Label|Value|
 |--------|------|-----|-----|
-|grad-rates|tweet|`location`||
-|grad-rates|facebook|`location`||
-|grad-rates|email|`location`||
-|grad-rates|new-comment||
-|grad-rates|open-share-discuss||
-|grad-rates|close-share-discuss||
-|grad-rates|summary-copied||
-|grad-rates|featured-tweet-action|`action`|
-|grad-rates|featured-facebook-action|`action`|
+|grad-rates|slide-exit|`slide_index`|`timeOnLastSlide`|
+|grad-rates|exit-start-card-button-click|`slide_index`||
+|grad-rates|exit-keyboard|`slide_index`||
+|grad-rates|exit-tap|`slide_index`||
+|grad-rates|exit-next-button-click|`slide_index`||
+|grad-rates|exit-previous-button-click|`slide_index`||
+|grad-rates|read-more-click|`href`||
+|grad-rates|learn-more-click|||
+|grad-rates|completion|percentage||

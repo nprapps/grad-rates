@@ -1,5 +1,4 @@
 // Global state
-var $upNext = null;
 var $document;
 var $body;
 var $section;
@@ -50,7 +49,7 @@ var trackCompletion = function(index) {
     /*
     * Track completion based on slide index.
     */
-    how_far = (index + 1) / ($slides.length - APP_CONFIG.NUM_SLIDES_AFTER_CONTENT);
+    how_far = (index + 1) / ($slides.length - 1);
 
     if (how_far >= completion + 0.25) {
         completion = how_far - (how_far % 0.25);
@@ -203,16 +202,6 @@ var onSlideClick = function(e) {
     }
 }
 
-var onNextPostClick = function(e) {
-    /*
-     * Click next post
-     */
-    e.preventDefault();
-    ANALYTICS.trackEvent('next-post');
-    window.top.location = NEXT_POST_URL;
-    return true;
-}
-
 var fakeMobileHover = function() {
     /*
      * Fake hover when tapping buttons
@@ -348,7 +337,6 @@ $(document).ready(function() {
     $arrows = $('.controlArrow');
     $previousArrow = $arrows.filter('.prev');
     $nextArrow = $arrows.filter('.next');
-    $upNext = $('.up-next');
     $progressIndicator = $('.progress-indicator');
     $currentProgress = $('.current-progress');
     $readMoreLinks = $('.read-more');
@@ -359,7 +347,6 @@ $(document).ready(function() {
     $readMoreLinks.on('click', onReadMoreClick);
     $learnMoreLink.on('click', onLearnMoreClick);
 
-    $upNext.on('click', onNextPostClick);
     $document.on('deck.change', onSlideChange);
 
     $previousArrow.on('click', onPreviousArrowClick);
