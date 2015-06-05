@@ -68,13 +68,14 @@
             color: #fff;
         }
         
-        span {white-space:nowrap;}
-        
         
         h3 {
-            font-size: 28px;
+            font-size: 22px;
             line-height: 1.3;
             margin: 0 0 10px 0;
+            @media @screen-small-above {
+                font-size: 28px;
+            }
         }
 
         h4 {
@@ -113,7 +114,7 @@
             position: fixed;
             bottom: 0;
             left: 0;
-            height: 45px;
+            height: 50px;
             width: 100%;
             border-top: 1px solid #eee;
             background: #1A1A1A url('../assets/chalk-bg.png');
@@ -149,30 +150,36 @@
 
                 }
             }
-
-            h6 {
-                text-align: center;
-                margin: 0;
-                padding: 0;
-                font-size: 12px;
-                font-weight: bold;
-                text-transform: uppercase;
-
-
-                a {
-                    display: block;
-                    color: #eee;
-                    padding-top: 15px;
-                    text-decoration: none;
-
-                    &:before {
-                        font-family: "FontAwesome";
-                        content: '\f14c';
-                        display: inline-block;
-                        padding-right: 5px;
+            
+            
+            a {
+                display: block;
+                color: #eee;
+                padding-top: 7px;
+                text-decoration: none;
+                
+                @media @screen-small-above {
+                   padding-top: 15px; 
+                }
+                
+                h6 {
+                    text-align: center;
+                    margin: 0;
+                    padding: 0;
+                    font-size: 12px;
+                    font-weight: bold;
+                    text-transform: uppercase; 
+                    line-height: 1.5;
+                    
+                    i {padding-left: 5px;}
+                    
+                    @media @screen-small-above {
+                        font-size: 15px;
                     }
                 }
             }
+
+            
         }
 
     }
@@ -211,7 +218,12 @@
             .slide-header, .slide-footer {
                 border-color: @early-color;
                 color: @early-color;
-                h6 { a {color: @early-color;} }
+                a {
+                    color: @early-color;
+                    &:hover {
+                        .no-touch & {color: #fff;}
+                    }
+                }
             }
         }
     }
@@ -222,7 +234,12 @@
             .slide-header, .slide-footer {
                 border-color: @lowering-color;
                 color: @lowering-color;
-                h6 { a {color: @lowering-color;} }
+                a {
+                    color: @lowering-color;
+                    &:hover {
+                        .no-touch & {color: #fff;}
+                    }
+                }
             }
         }
     }
@@ -233,7 +250,12 @@
             .slide-header, .slide-footer {
                 border-color: @gaming-color;
                 color: @gaming-color;
-                h6 { a {color: @gaming-color;} }
+                a {
+                    color: @gaming-color;
+                    &:hover {
+                        .no-touch & {color: #fff;}
+                    }
+                }
             }
         }
     }
@@ -244,7 +266,7 @@
             .slide-header, .slide-footer {
                 border-color: @exit-color;
                 color: @exit-color;
-                h6 { a {color: @exit-color;} }
+                a {color: @exit-color;}
             }
         }
     }
