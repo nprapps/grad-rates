@@ -17,12 +17,15 @@
                     {% if row.stateline %}
                         <h5><b>{{ row.stateline }}</b></h5>
                     {% endif %}
+                    
                     {% if row.reporter %}
-                        <h6>Reporting by {{ row.reporter }}</h6>
-                    {% endif %}
-                    {% if row.read_more %}
-                        <h6><a class="read-more" href="{{ row.read_more_link }}" target="_blank">{{ row.read_more }}</a></h6>
-                    {% endif %}
+                        <a class="read-more" href="{{ row.read_more_link }}" target="_blank">
+                            <h6>Reporting by {{ row.reporter }}</h6>
+                            <h6>Read More <i class="fa fa-external-link-square"></i></h6>
+                        </a>
+                   {% endif %}
+                       
+                   
                 </div>
             </div><!--full-block-content-->
 
