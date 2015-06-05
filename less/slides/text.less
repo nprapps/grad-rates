@@ -366,38 +366,56 @@
         .story-promo {
             padding: 10px 20px;
             background-color: #fff;
-            border: 10px solid #1A7F7B;
+            border: 5px solid #1A7F7B;
             .box-shadow(12px 12px 30px rgba(0,0,0,.7));
             
-            p {
-                font-size: 18px;
-                font-family: "Gotham SSm", "Helvetica Neue", Helvetica, Arial, sans-serif;
-                line-height: 1.2;
-                text-transform: uppercase;
-                padding-bottom: 10px;
-                border-bottom: 2px solid #ddd;
+            @media @screen-small-above {
+                border-width: 10px;
+            }
+            
+            &:hover {
+                .no-touch & {
+                    border-color: #87C0BE;
+                }
+            }
+            
+            a {
                 
-                a {
+                
+                &:hover {
+                    .no-touch & {
+                        p {color: #1A7F7B;}
+                    }
+                }
+                
+                p {
+                    font-size: 12px;
+                    font-family: "Gotham SSm", "Helvetica Neue", Helvetica, Arial, sans-serif;
+                    line-height: 1.2;
+                    text-transform: uppercase;
+                    padding-bottom: 10px;
+                    border-bottom: 2px solid #ddd;
                     text-decoration: none;
                     color: #06403A;
                     font-weight: bold;
                     
-                    &:hover {
-                        .no-touch & {color: #1A7F7B;}
+                    @media @screen-small-above {
+                        font-size: 18px;
                     }
+                    
                 }
-            }
-            
-            img {
-                max-width: 100%;
-            }
-            
-            .promo-credit {
-                font-family: "Gotham SSm", "Helvetica Neue", Helvetica, Arial, sans-serif;
-                font-size: 11px;
-                color: #ccc;
-                text-align: right;
-                display: block;
+                
+                img {
+                    max-width: 100%;
+                }
+                
+                .promo-credit {
+                    font-family: "Gotham SSm", "Helvetica Neue", Helvetica, Arial, sans-serif;
+                    font-size: 11px;
+                    color: #ccc;
+                    text-align: right;
+                    display: block;
+                }
             }
             
         }
