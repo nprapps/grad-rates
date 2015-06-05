@@ -361,6 +361,47 @@
             line-height: 1;
         }
         
+        .story-promo {
+            padding: 10px 20px;
+            background-color: #fff;
+            border: 10px solid #1A7F7B;
+            .box-shadow(12px 12px 30px rgba(0,0,0,.7));
+            
+            p {
+                font-size: 18px;
+                font-family: "Gotham SSm", "Helvetica Neue", Helvetica, Arial, sans-serif;
+                line-height: 1.2;
+                text-transform: uppercase;
+                padding-bottom: 10px;
+                border-bottom: 2px solid #ddd;
+                
+                a {
+                    text-decoration: none;
+                    color: #06403A;
+                    font-weight: bold;
+                    
+                    &:hover {
+                        .no-touch & {color: #1A7F7B;}
+                    }
+                }
+            }
+            
+            img {
+                max-width: 100%;
+            }
+            
+            .promo-credit {
+                font-family: "Gotham SSm", "Helvetica Neue", Helvetica, Arial, sans-serif;
+                font-size: 11px;
+                color: #ccc;
+                text-align: right;
+                display: block;
+            }
+            
+        }
+        
+        
+        
         .credits {
             margin-top: 30px;
             
